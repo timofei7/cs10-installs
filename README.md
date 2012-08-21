@@ -27,6 +27,7 @@
 
 
 ##2) Install Homebrew (and some dependencies)##
+0. Download and install [Xquartz](http://xquartz.macosforge.org/) (optional on 10.6 or 10.7 but required on 10.8)
 1. open the builtin Terminal app in /Applications (or if you like customization use [iTerm2](http://www.iterm2.com/))
 2. backup older/conflicting libraries:
 	1. copy/paste into Terminal: `sudo mv /opt /opt.before_CS10` 
