@@ -39,12 +39,12 @@
 
 1. Run: `export PATH=/usr/local/bin:/usr/local/share/python:$PATH`
 2. Run: `brew install python`
-3. Run: `pip install numpy`
+3. Run: `pip -q install numpy`
 4. Run: `brew install opencv`
 3. This last step will take a while but notice that you can use `brew` to install all sorts of cool opensource software really easily!
 
 
-##4) Install Eclipse and configurre project for JavaCV##
+##4) Install Eclipse and configure project for JavaCV##
 
 1. Download and install [Eclipse Classic](http://www.eclipse.org/downloads/) (a java interactive developement environment)
 2. Download [JavaCV](http://javacv.googlecode.com/files/javacv-0.2-bin.zip), unzip, put it into some folder that you can remember.

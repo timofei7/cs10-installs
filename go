@@ -30,6 +30,6 @@ PATH=/usr/local/bin:/usr/local/share/python:$PATH
 export PATH
 echo 'export PATH=/usr/local/bin:/usr/local/share/python:$PATH' >> ~/.profile
 echo "installing numpy dependency"
-pip install numpy
+pip -q install numpy
 echo "installing opencv"
 brew install opencv
