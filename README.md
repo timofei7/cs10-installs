@@ -30,7 +30,7 @@
 0. Download and install [Xquartz](http://xquartz.macosforge.org/) (optional on 10.6 or 10.7 but required on 10.8)
 1. open the builtin Terminal app in /Applications (or if you like customization use [iTerm2](http://www.iterm2.com/))
 2. backup older/conflicting libraries:
-	1. copy/paste into Terminal: `sudo mv /opt /opt.before_CS10` 
+	1. copy/paste into Terminal: `sudo mv /opt/local /opt/local.before_CS10` 
 	2. copy/paste into Terminal: `sudo mv /usr/local /usr/local.before_CS10`
 3. Install [Homebrew](http://mxcl.github.com/homebrew/) which is a handy opensource sofware manager by just copy/pasting the following into Terminal:  `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`
 4. Make sure it installed correctly: `brew doctor`

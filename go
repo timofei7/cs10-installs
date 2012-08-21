@@ -8,7 +8,7 @@ echo "authenticating, you may need to enter your system password"
 sudo true 
 
 echo "backing up possibly conflicting libraries in /opt and /usr/local"
-sudo mv /opt /opt.before_CS10 2>&1 | grep -v "No such"
+sudo mv /opt/local /opt/local.before_CS10 2>&1 | grep -v "No such"
 sudo mv /usr/local /usr/local.before_CS10 2>&1 | grep -v "No such"
 
 echo "installing homebrew from http://mxcl.github.com/homebrew/"
