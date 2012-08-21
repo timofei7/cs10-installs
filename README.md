@@ -61,7 +61,7 @@
 	* on Lion:  [command line tools Lion](http://www.cs.dartmouth.edu/~tim/command_line_tools_for_xcode_os_x_lion_aug_2012.dmg)
 	* on Mountain Lion: [command line tools Mountain Lion](http://www.cs.dartmouth.edu/~tim/command_line_tools_for_xcode_os_x_mountain_lion_aug_2012.dmg)
 	* on Snow Leopard just install Xcode per step 1
-
+	* after installing the dmg you **must** run `sudo xcode-select -switch /usr/bin`
 
 
 
