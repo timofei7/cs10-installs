@@ -1,4 +1,4 @@
-# CS10 Installation #
+# CS10 OS X Software Installs#
 
 
 
@@ -13,11 +13,13 @@
 
 1. Download and install Xcode via the App Store: [xcode](http://itunes.apple.com/us/app/xcode)
 2. Open the Xcode app (/Applications/Xcode.app)
-3. Go to Preferences: ![image](https://raw.github.com/timofei7/cs10-installs/master/images//goto_preferences.png)
-4. Make sure Command Line Tools are installed:  ![image](https://raw.github.com/timofei7/cs10-installs/master/images/preferences_window.png)
+3. Go to Preferences:
+![image](https://raw.github.com/timofei7/cs10-installs/master/images//goto_preferences.png)
+4. Make sure Command Line Tools are installed:
+![image](https://raw.github.com/timofei7/cs10-installs/master/images/preferences_window.png)
 
 
-###on Snow Leopard (ideally you should really upgrade to 10.7+ but this will work):###
+###on Snow Leopard (ideally you should upgrade to 10.7+ but this will work):###
 
 
 1. Download and Install:  [xcode_4.2_for_snow_leopard.dmg](http://www.cs.dartmouth.edu/~tim/xcode_4.2_for_snow_leopard.dmg)
@@ -42,11 +44,11 @@
 3. This last step will take a while but notice that you can use `brew` to install all sorts of cool opensource software really easily!
 
 
-##4) Install Eclipse and JavaCV##
+##4) Install Eclipse and configurre project for JavaCV##
 
 1. Download and install [Eclipse Classic](http://www.eclipse.org/downloads/) (a java interactive developement environment)
 2. Download [JavaCV](http://javacv.googlecode.com/files/javacv-0.2-bin.zip), unzip, put it into some folder that you can remember.
-3. Start eclipse
+3. Start eclipse and start a new Java Project
 4. Navigate to Project > Properties > Java Build Path > Libraries and click "Add External JARs...".
 4. Locate the JAR files, select them, and click OK.
 
