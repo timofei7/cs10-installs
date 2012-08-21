@@ -23,9 +23,13 @@ if [[ "$DOCTOR" != *raring to brew* ]]; then
   exit 1;
 fi
 
+echo "installing python dependency"
 brew install python
+echo "setting paths"
 PATH=/usr/local/bin:/usr/local/share/python:$PATH
 export PATH
+echo 'export PATH=/usr/local/bin:/usr/local/share/python:$PATH' >> ~/.profile
+echo "installing numpy dependency"
 pip install numpy
+echo "installing opencv"
 brew install opencv
-

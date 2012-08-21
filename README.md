@@ -5,7 +5,7 @@
 
 
 
-##Install Developer Tools + Command Line Tools:##
+##1) Install Developer Tools + Command Line Tools:##
 
 ###on Lion (10.7.x) or MountainLion (10.8.x):###
 
@@ -13,20 +13,47 @@
 
 1. Download and install Xcode via the App Store: [xcode](http://itunes.apple.com/us/app/xcode)
 2. Open the Xcode app (/Applications/Xcode.app)
-3. Go to Preferences: ![image](images/goto_preferences.png)
-4. Make sure Command Line Tools are installed:  ![image](images/preferences_window.png)
+3. Go to Preferences: ![image](https://raw.github.com/timofei7/cs10-installs/master/images//goto_preferences.png)
+4. Make sure Command Line Tools are installed:  ![image](https://raw.github.com/timofei7/cs10-installs/master/images/preferences_window.png)
 
-###Snow Leopard (ideally you should really upgrade to 10.7 at the least but will work):###
+
+###on Snow Leopard (ideally you should really upgrade to 10.7+ but this will work):###
 
 
 1. Download and Install:  [xcode_4.2_for_snow_leopard.dmg](http://www.cs.dartmouth.edu/~tim/xcode_4.2_for_snow_leopard.dmg)
 
 
 
-##Clean Environment and Install Homebrew##
+##2) Install Homebrew (and some dependencies)##
 1. open the builtin Terminal app in /Applications (or if you like customization use [iTerm2](http://www.iterm2.com/))
-2. copy paste this command in: `bash <(curl -fsSkL raw.github.com/timofei7/cs10-installs/go)`
-3. this will run a script that will install all the appropriate tools. If you want to run each command in the script separately / see what it is doing you can view it here: 
+2. backup older/conflicting libraries:
+	1. copy/paste into Terminal: `sudo mv /opt /opt.before_CS10` 
+	2. copy/paste into Terminal: `sudo mv /usr/local /usr/local.before_CS10`
+3. Install [Homebrew](http://mxcl.github.com/homebrew/) which is a handy opensource sofware manager by just copy/pasting the following into Terminal:  `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`
+4. Make sure it installed correctly: `brew doctor`
+5. It should say: "Your system is raring to brew" if not email any errors you encountered to your TAs
+
+##3) Install OpenCV and dependencies##
+
+1. Run: `export PATH=/usr/local/bin:/usr/local/share/python:$PATH`
+2. Run: `brew install python`
+3. Run: `pip install numpy`
+4. Run: `brew install opencv`
+3. This last step will take a while but notice that you can use `brew` to install all sorts of cool opensource software really easily!
+
+
+##4) Install Eclipse and JavaCV##
+
+1. Download and install [Eclipse Classic](http://www.eclipse.org/downloads/) (a java interactive developement environment)
+2. Download [JavaCV](http://javacv.googlecode.com/files/javacv-0.2-bin.zip), unzip, put it into some folder that you can remember.
+3. Start eclipse
+4. Navigate to Project > Properties > Java Build Path > Libraries and click "Add External JARs...".
+4. Locate the JAR files, select them, and click OK.
+
+
+
+##notes##
+1. An alternative to steps 2 and 3 is an automated install. Just paste `bash <(curl -fsSkL raw.github.com/timofei7/cs10-installs/go)` into Terminal and it will attempt to run all the steps for you
 
 
 
@@ -37,24 +64,6 @@
 
 
 
-
-Open terminal:
-
-
-
-sudo mv /opt /opt.before_CS10
-
-sudo mv /usr/local /usr/local.before_CS10
-
-ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
-
-
-
-brew install python
-
-brew install pip
-
-pip install numpy
 
 
 
