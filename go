@@ -2,8 +2,8 @@
 
 echo "this will install homebrew and opencv"
 echo "you will see lots of stuff happening but most of it is safe to ignore"
-echo "it may take a little while...\n"
-
+echo "it may take a little while..."
+echo ""
 echo "authenticating, you may need to enter your system password"
 sudo true 
 
@@ -17,7 +17,7 @@ ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
 
 DOCTOR=`brew doctor`
 
-if [[ "$DOCTOR" != *raring to brew* ]]; then
+if [[ "$DOCTOR" != *raring\ to\ brew* ]]; then
   echo "sorry! something went wrong. please copy paste any error messages and email your TAs"
   echo "error: \n$DOCTOR"
   exit 1;

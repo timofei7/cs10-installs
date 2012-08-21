@@ -53,7 +53,7 @@
 
 
 ##notes##
-1. An alternative to steps 2 and 3 is an automated install. Just paste `bash <(curl -fsSkL raw.github.com/timofei7/cs10-installs/go)` into Terminal and it will attempt to run all the steps for you
+1. An alternative to steps 2 and 3 is an automated install. Just paste `bash <(curl -fsSkL raw.github.com/timofei7/cs10-installs/master/go)` into Terminal and it will attempt to run all the steps for you
 
 
 
