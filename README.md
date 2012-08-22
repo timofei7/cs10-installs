@@ -59,11 +59,9 @@
 1. An alternative to steps 2 and 3 is an automated install. Just paste `bash <(curl -fsSkL raw.github.com/timofei7/cs10-installs/master/go)` into Terminal and it will attempt to run all the steps for you
 2. An alternative to step 1 would be to only install command line tools rather than all of xcode. You may want Xcode if you ever want to write iOS apps, otherwise you can just download and install these:
 	* on Lion:  [command line tools Lion](http://www.cs.dartmouth.edu/~tim/command_line_tools_for_xcode_os_x_lion_aug_2012.dmg)
-	* on Mountain Lion: [command line tools Mountain Lion](http://www.cs.dartmouth.edu/~tim/command_line_tools_for_xcode_os_x_mountain_lion_aug_2012.dmg)
+	* on Mountain Lion: [command line tools Mountain Librarieson](http://www.cs.dartmouth.edu/~tim/command_line_tools_for_xcode_os_x_mountain_lion_aug_2012.dmg)
 	* on Snow Leopard just install Xcode per step 1
-	* after installing the dmg you **must** run `sudo xcode-select -switch /usr/bin`
-
-
+    * after installing commandline tools this way you **must** also run `sudo xcode-select -switch /usr/bin`
 
 
 

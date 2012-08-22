@@ -12,6 +12,16 @@ echo ""
 echo "authenticating, you may need to enter your system password"
 sudo true 
 
+if [ -e /usr/bin/gcc -a ! -e /Applications/Xcode.app ]; then
+  echo "detected commandline tools only must enable"
+  sudo xcode-select -switch /usr/bin
+elif [ ! -e /usr/bin/gcc -a ! -e /Applications/Xcode.app ]; then
+  echo "no xcode detected please install Xcode first then rerun this"
+  exit 1;
+else
+  echo "xcode detected"
+fi
+
 echo "backing up possibly conflicting libraries in /opt and /usr/local"
 sudo mv /opt/local /opt/local.before_CS10 2>&1 | grep -v "No such"
 sudo mv /usr/local /usr/local.before_CS10 2>&1 | grep -v "No such"
