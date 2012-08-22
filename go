@@ -54,8 +54,8 @@ echo "installing opencv"
 # just find any old gfortran we don't really care
 GFORTRAN=`find /usr/bin -maxdepth 1 -name 'gfortran*' -print -quit`
 if [ "$GFORTRAN" == "" ]; then
-  "found extra fortran dependency..."
-  brew install gfortran || error "installing gfortran"
+  #doesnt actually need it set to anything real
+  export FC=/usr/bin/gfortran 
 else
   export FC=$GFORTRAN
 fi
