@@ -22,7 +22,7 @@ else
   echo "xcode detected"
 fi
 
-echo "backing up possibly conflicting libraries in /opt and /usr/local"
+echo "backing up possibly conflicting libraries in /opt/local and /usr/local"
 sudo mv /opt/local /opt/local.before_CS10 2>&1 | grep -v "No such"
 sudo mv /usr/local /usr/local.before_CS10 2>&1 | grep -v "No such"
 
@@ -34,18 +34,29 @@ DOCTOR=`brew doctor`
 
 if [[ "$DOCTOR" != *raring\ to\ brew* ]]; then
   echo "sorry! something went wrong. please copy paste any error messages and email your TAs"
-  echo "error: \n$DOCTOR"
+  echo "error: $DOCTOR"
   exit 1;
 fi
 
 
 echo "installing python dependency"
 brew install python || error "installing python" 
+
 echo "setting paths"
 PATH=/usr/local/bin:/usr/local/share/python:$PATH
 export PATH
 echo 'export PATH=/usr/local/bin:/usr/local/share/python:$PATH' >> ~/.profile
+
 echo "installing numpy dependency"
 pip -q install numpy || error "installing numpy"
+
 echo "installing opencv"
+# just find any old gfortran we don't really care
+GFORTRAN=`find /usr/bin -maxdepth 1 -name 'gfortran*' -print -quit`
+if [ "$GFORTRAN" == "" ]; then
+  "found extra fortran dependency..."
+  brew install gfortran || error "installing gfortran"
+else
+  export FC=$GFORTRAN
+fi
 brew install opencv || error "installing opencv" 
