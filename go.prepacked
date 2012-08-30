@@ -42,9 +42,16 @@ echo 'export PATH=/usr/local/bin:/usr/local/share/python:$PATH' >> ~/.profile
 
 DOCTOR=`brew doctor`
 
-if [[ "$DOCTOR" != *raring\ to\ brew* ]]; then
+if [[ "$DOCTOR" != *raring\ to\ brew* || "$DOCTOR" != *Homebrew\ is\ outdated* ]]; then
   echo "sorry! something went wrong. please copy paste any error messages and email your TAs"
   echo "error: $DOCTOR"
+  exit 1;
+fi
+
+UPDATE=`brew update; brew upgrade`
+if [[ "$UPDATE" == *rror* ]]; then
+  echo "something went wrong during brew update, this is an optional step but if it worries you email your TAs with this error message"
+  echo "error: $UPDATE"
   exit 1;
 fi
 
