@@ -68,17 +68,9 @@ else
   export FC=$GFORTRAN
 fi
 
-#if [[ $OSXVERSION == "10.6" ]]; then
-#  sed -i.sav -e 's/.*libtiff.*//' /usr/local/Library/Formula/opencv.rb
-#fi
-
-#setting ldflags to pick up the libpng we installed cause there seems to be a system libpng problem
-export LDFLAGS=-L/usr/local/opt/libpng/lib
-export CPPFLAGS=-I/usr/local/opt/libpng/include
-export CFLAGS=-I/usr/local/opt/libpng/include
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/opt/libpng/lib/pkgconfig
-
+brew link libpng
 brew install opencv || error "installing opencv" 
+brew unlink libpng
 
 
 echo "you are all set to go!"
