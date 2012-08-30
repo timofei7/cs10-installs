@@ -17,13 +17,13 @@
 ![image](https://raw.github.com/timofei7/cs10-installs/master/images//goto_preferences.png)
 4. Make sure Command Line Tools are installed:
 ![image](https://raw.github.com/timofei7/cs10-installs/master/images/preferences_window.png)
+5. Download and install [Xquartz](http://xquartz.macosforge.org/) (optional on 10.6 or 10.7 but required on 10.8)
 
 
 ###on Snow Leopard (ideally you should upgrade to 10.7+ but this will work):###
 
 
 1. Download and Install:  [xcode_4.2_for_snow_leopard.dmg](http://www.cs.dartmouth.edu/~tim/cs10/xcode_4.2_for_snow_leopard.dmg)
-
 
 
 ##2) Install Homebrew and OpenCV##
@@ -37,7 +37,6 @@ I have a script that will attempt to install everything for you.  There are two 
 ###Manual Installation Method Alternative:###
 
 ####1) Install Homebrew and Dependencies####
-0. Download and install [Xquartz](http://xquartz.macosforge.org/) (optional on 10.6 or 10.7 but required on 10.8)
 1. open the builtin Terminal app in /Applications (or if you like customization use [iTerm2](http://www.iterm2.com/))
 2. backup older/conflicting libraries:
 	1. copy/paste into Terminal: `sudo mv /opt/local /opt/local.before_CS10` 
