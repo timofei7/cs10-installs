@@ -31,7 +31,9 @@ echo "it is an open source package manager, very cool"
 
 cd /usr/
 OSXVERSION=`sw_vers -productVersion | cut -f1,2 -d.`
-curl http://www.cs.dartmouth.edu/\~tim/cs10/$OSXVERSION_usr.local.tar.gz | tar -C /usr -zxf - 
+PREPACKAGE=http://www.cs.dartmouth.edu/\~tim/cs10/"$OSXVERSION"_usr.local.tar.gz
+echo "downloading and untarring prepacked stuffs from: $PREPACKAGE "
+curl $PREPACKAGE | tar -C /usr -zxf - 
 
 echo "setting paths"
 PATH=/usr/local/bin:/usr/local/share/python:$PATH
