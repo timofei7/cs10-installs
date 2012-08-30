@@ -45,11 +45,10 @@
 3. This last step will take a while but notice that you can use `brew` to install all sorts of cool opensource software really easily!
 
 
-##4) Install Eclipse and configure project for JavaCV##
+##4) Configure eclipse project for JavaCV##
 
-1. Download and install [Eclipse Classic](http://www.eclipse.org/downloads/) (a java interactive developement environment)
 2. Download [JavaCV](http://javacv.googlecode.com/files/javacv-0.2-bin.zip), unzip, put it into some folder that you can remember.
-3. Start eclipse and start a new Java Project
+3. Start eclipse and open your java project
 4. Navigate to Project > Properties > Java Build Path > Libraries and click "Add External JARs...".
 4. Locate the JAR files, select them, and click OK.
 
