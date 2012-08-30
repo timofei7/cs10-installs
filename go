@@ -76,8 +76,9 @@ fi
 export LDFLAGS=-L/usr/local/opt/libpng/lib
 export CPPFLAGS=-I/usr/local/opt/libpng/include
 export CFLAGS=-I/usr/local/opt/libpng/include
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/usr/local/opt/libpng/lib/pkgconfig
 
-LDFLAGS=-L/usr/local/opt/libpng/lib CPPFLAGS=-I/usr/local/opt/libpng/include CFLAGS=-I/usr/local/opt/libpng/include brew install opencv || error "installing opencv" 
+brew install opencv || error "installing opencv" 
 
 
 echo "you are all set to go!"
