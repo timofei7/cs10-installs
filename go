@@ -10,7 +10,7 @@ echo "you will see lots of stuff happening but most of it is safe to ignore"
 echo "it may take a little while..."
 echo ""
 echo "authenticating, you may need to enter your system password"
-sudo true 
+sudo -v 
 
 if [ -e /usr/bin/gcc -a ! -e /Applications/Xcode.app ]; then
   echo "detected commandline tools only must enable"
@@ -39,7 +39,7 @@ if [[ "$DOCTOR" != *raring\ to\ brew* ]]; then
 fi
 
 echo "reauthenticating if necessary"
-sudo true
+sudo -v 
 
 echo "installing python dependency"
 brew install python || error "installing python" 
