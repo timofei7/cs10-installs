@@ -1,0 +1,48 @@
+#!/bin/bash
+
+function error {
+  echo "Error occured in $1, please email your TAs with copy/pasted error messages"
+  exit 1;
+}  
+
+echo "this will install homebrew and opencv"
+echo "you will see lots of stuff happening but most of it is safe to ignore"
+echo "it may take a little while..."
+echo ""
+echo "authenticating, you may need to enter your system password"
+sudo true 
+
+if [ -e /usr/bin/gcc -a ! -e /Applications/Xcode.app ]; then
+  echo "detected commandline tools only must enable"
+  sudo xcode-select -switch /usr/bin
+elif [ ! -e /usr/bin/gcc -a ! -e /Applications/Xcode.app ]; then
+  echo "no xcode detected please install Xcode first then rerun this"
+  exit 1;
+else
+  echo "xcode detected"
+fi
+
+echo "backing up possibly conflicting libraries in /opt/local and /usr/local"
+sudo mv /opt/local /opt/local.before_CS10 2>&1 | grep -v "No such"
+sudo mv /usr/local /usr/local.before_CS10 2>&1 | grep -v "No such"
+
+echo "installing a prebuilt version of homebrew (http://mxcl.github.com/homebrew/)"
+echo "it is an open source package manager, very cool"
+
+cd /usr/
+OSXVERSION=`sw_vers -productVersion | cut -f1,2 -d.`
+curl http://www.cs.dartmouth.edu/\~tim/cs10/$OSXVERSION_usr.local.tar.gz | tar -C /usr -zxf - 
+
+echo "setting paths"
+PATH=/usr/local/bin:/usr/local/share/python:$PATH
+export PATH
+echo 'export PATH=/usr/local/bin:/usr/local/share/python:$PATH' >> ~/.profile
+
+DOCTOR=`brew doctor`
+
+if [[ "$DOCTOR" != *raring\ to\ brew* ]]; then
+  echo "sorry! something went wrong. please copy paste any error messages and email your TAs"
+  echo "error: $DOCTOR"
+  exit 1;
+fi
+
