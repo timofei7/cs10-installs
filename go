@@ -5,6 +5,9 @@ function error {
   exit 1;
 }  
 
+
+OSXVERSION=`sw_vers -productVersion | cut -f1,2 -d.`
+
 echo "this will install homebrew and opencv"
 echo "you will see lots of stuff happening but most of it is safe to ignore"
 echo "it may take a little while..."
@@ -63,6 +66,10 @@ if [ "$GFORTRAN" == "" ]; then
   export FC=/usr/bin/gfortran 
 else
   export FC=$GFORTRAN
+fi
+
+if [[ $OSXVERSION == "10.6" ]]; then
+  sed -i.sav -e 's/.*libtiff.*//' /usr/local/Library/Formula/opencv.rb
 fi
 
 #setting ldflags to pick up the libpng we installed cause there seems to be a system libpng problem
