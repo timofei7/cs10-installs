@@ -33,7 +33,7 @@ cd /usr/
 OSXVERSION=`sw_vers -productVersion | cut -f1,2 -d.`
 PREPACKAGE=http://www.cs.dartmouth.edu/\~tim/cs10/"$OSXVERSION"_usr.local.tar.gz
 echo "downloading and untarring prepacked stuffs from: $PREPACKAGE "
-curl $PREPACKAGE | tar -C /usr -zxf - 
+sudo curl $PREPACKAGE | tar -C /usr -zxf - 
 
 echo "setting paths"
 PATH=/usr/local/bin:/usr/local/share/python:$PATH
