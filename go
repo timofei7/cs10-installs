@@ -60,3 +60,6 @@ else
   export FC=$GFORTRAN
 fi
 brew install opencv || error "installing opencv" 
+
+
+echo "you are all set to go!"

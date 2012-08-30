@@ -40,6 +40,7 @@ PATH=/usr/local/bin:/usr/local/share/python:$PATH
 export PATH
 echo 'export PATH=/usr/local/bin:/usr/local/share/python:$PATH' >> ~/.profile
 
+echo "testing install"
 DOCTOR=`brew doctor`
 
 if [[ "$DOCTOR" != *raring\ to\ brew* && "$DOCTOR" != *Homebrew\ is\ outdated* ]]; then
@@ -48,6 +49,7 @@ if [[ "$DOCTOR" != *raring\ to\ brew* && "$DOCTOR" != *Homebrew\ is\ outdated* ]
   exit 1;
 fi
 
+echo "updating packages if necessary..."
 UPDATE=`brew update; brew upgrade`
 if [[ "$UPDATE" == *rror* ]]; then
   echo "something went wrong during brew update, this is an optional step but if it worries you email your TAs with this error message"
@@ -55,3 +57,4 @@ if [[ "$UPDATE" == *rror* ]]; then
   exit 1;
 fi
 
+echo "you are all set to go!"
