@@ -48,7 +48,7 @@ export PATH
 echo 'export PATH=/usr/local/bin:/usr/local/share/python:$PATH' >> ~/.profile
 
 echo "installing numpy dependency"
-pip -q install numpy || error "installing numpy"
+sudo /usr/local/share/python/pip -q install numpy || error "installing numpy"
 
 echo "installing opencv"
 # just find any old gfortran we don't really care
