@@ -38,6 +38,8 @@ if [[ "$DOCTOR" != *raring\ to\ brew* ]]; then
   exit 1;
 fi
 
+echo "reauthenticating if necessary"
+sudo true
 
 echo "installing python dependency"
 brew install python || error "installing python" 
