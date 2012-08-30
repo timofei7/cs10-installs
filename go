@@ -70,7 +70,5 @@ fi
 
 brew link libpng
 brew install opencv || error "installing opencv" 
-brew unlink libpng
-
 
 echo "you are all set to go!"
