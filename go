@@ -71,4 +71,8 @@ fi
 brew link libpng
 brew install opencv || error "installing opencv" 
 
+if [[ $OSXVERSION != "10.8" ]]; then
+  brew unlink libpng
+fi
+
 echo "you are all set to go!"
