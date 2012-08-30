@@ -73,7 +73,7 @@ if [[ $OSXVERSION == "10.6" ]]; then
 fi
 
 #setting ldflags to pick up the libpng we installed cause there seems to be a system libpng problem
-LDFLAGS=-L/usr/local/lib,/usr/local/opt/libpng/lib CPPFLAGS=-I/usr/local/include,/usr/local/opt/libpng/include brew install opencv || error "installing opencv" 
+LDFLAGS="-L/usr/local/lib -L/usr/local/opt/libpng/lib" CPPFLAGS="-I/usr/local/include -I/usr/local/opt/libpng/include" brew install opencv || error "installing opencv" 
 
 
 echo "you are all set to go!"
