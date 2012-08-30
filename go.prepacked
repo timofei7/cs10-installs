@@ -12,10 +12,10 @@ echo ""
 echo "authenticating, you may need to enter your system password"
 sudo -v 
 
-if [ -e /usr/bin/gcc -a ! -e /Applications/Xcode.app ]; then
+if [ -e /usr/bin/gcc && ! -e /Applications/Xcode.app && ! -e /Developer ]; then
   echo "detected commandline tools only must enable"
   sudo xcode-select -switch /usr/bin
-elif [ ! -e /usr/bin/gcc -a ! -e /Applications/Xcode.app ]; then
+elif [ ! -e /usr/bin/gcc && ! -e /Applications/Xcode.app && ! -e /Developer ]; then
   echo "no xcode detected please install Xcode first then rerun this"
   exit 1;
 else
