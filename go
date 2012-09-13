@@ -25,9 +25,10 @@ else
   echo "xcode detected"
 fi
 
-echo "backing up possibly conflicting libraries in /opt/local and /usr/local"
+echo "backing up possibly conflicting libraries in /opt/local,/usr/local, and /sw"
 sudo mv /opt/local /opt/local.before_CS10 2>&1 | grep -v "No such"
 sudo mv /usr/local /usr/local.before_CS10 2>&1 | grep -v "No such"
+sudo mv /sw /sw.before_CS10 2>&1 | grep -v "No such"
 
 echo "installing homebrew from http://mxcl.github.com/homebrew/"
 echo "it is an open source package manager, very cool"
