@@ -41,6 +41,7 @@ I have a script that will attempt to install everything for you.  There are two 
 2. backup older/conflicting libraries:
 	1. copy/paste into Terminal: `sudo mv /opt/local /opt/local.before_CS10` 
 	2. copy/paste into Terminal: `sudo mv /usr/local /usr/local.before_CS10`
+	3. copy/paste into Terminal: `sudo mv /sw /sw.before_CS10`
 3. Install [Homebrew](http://mxcl.github.com/homebrew/) which is a handy opensource sofware manager by just copy/pasting the following into Terminal:  `ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)`
 4. Make sure it installed correctly: `brew doctor`
 5. It should say: "Your system is raring to brew" if not email any errors you encountered to your TAs
